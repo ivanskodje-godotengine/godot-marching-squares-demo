@@ -1,0 +1,128 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://images/marching_square.png" type="Texture" id=1]
+
+[node name="tiles" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+
+[node name="0" type="Sprite" parent="."]
+
+transform/pos = Vector2( 26, 26 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 66, 26 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 32, 0, 32, 32 )
+
+[node name="2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 106, 26 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 64, 0, 32, 32 )
+
+[node name="3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 146, 26 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 96, 0, 32, 32 )
+
+[node name="4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 26, 66 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 0, 32, 32, 32 )
+
+[node name="5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 66, 66 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 32, 32, 32, 32 )
+
+[node name="6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 106, 66 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 64, 32, 32, 32 )
+
+[node name="7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 146, 66 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 96, 32, 32, 32 )
+
+[node name="8" type="Sprite" parent="."]
+
+transform/pos = Vector2( 26, 106 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 0, 64, 32, 32 )
+
+[node name="9" type="Sprite" parent="."]
+
+transform/pos = Vector2( 66, 106 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 32, 64, 32, 32 )
+
+[node name="10" type="Sprite" parent="."]
+
+transform/pos = Vector2( 106, 106 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 64, 64, 32, 32 )
+
+[node name="11" type="Sprite" parent="."]
+
+transform/pos = Vector2( 146, 106 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 96, 64, 32, 32 )
+
+[node name="12" type="Sprite" parent="."]
+
+transform/pos = Vector2( 26, 146 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 0, 96, 32, 32 )
+
+[node name="13" type="Sprite" parent="."]
+
+transform/pos = Vector2( 66, 146 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 32, 96, 32, 32 )
+
+[node name="14" type="Sprite" parent="."]
+
+transform/pos = Vector2( 106, 146 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 64, 96, 32, 32 )
+
+[node name="15" type="Sprite" parent="."]
+
+transform/pos = Vector2( 146, 146 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 96, 96, 32, 32 )
+
+

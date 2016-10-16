@@ -16,10 +16,13 @@ margin/top = 0.0
 margin/right = 0.0
 margin/bottom = 0.0
 script/script = ExtResource( 1 )
-columns = 20
-rows = 20
-display = 2
-draw_grid = true
+columns = 40
+rows = 40
+fill_percent = 30
+enable_wall = true
+softness_value = 3
+display = 0
+draw_grid = false
 
 [node name="tile_map" type="TileMap" parent="."]
 
@@ -38,5 +41,230 @@ collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
 tile_data = IntArray(  )
+
+[node name="canvas_layer" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="control" type="Control" parent="canvas_layer"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+
+[node name="panel_container" type="PanelContainer" parent="canvas_layer/control"]
+
+anchor/top = 1
+anchor/right = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 8.0
+margin/top = 61.0
+margin/right = 307.0
+margin/bottom = 636.0
+
+[node name="hbox" type="HBoxContainer" parent="canvas_layer/control/panel_container"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 7.0
+margin/top = 7.0
+margin/right = 318.0
+margin/bottom = 50.0
+custom_constants/separation = 10
+alignment = 0
+
+[node name="btn_generate" type="Button" parent="canvas_layer/control/panel_container/hbox"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 55.0
+margin/bottom = 43.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Reload"
+flat = false
+
+[node name="fill_percent_container" type="VBoxContainer" parent="canvas_layer/control/panel_container/hbox"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 65.0
+margin/top = 0.0
+margin/right = 137.0
+margin/bottom = 43.0
+alignment = 0
+
+[node name="fill_percent_label" type="Label" parent="canvas_layer/control/panel_container/hbox/fill_percent_container"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 72.0
+margin/bottom = 14.0
+text = "Fill Percent"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="fill_percent_text_edit" type="TextEdit" parent="canvas_layer/control/panel_container/hbox/fill_percent_container"]
+
+rect/min_size = Vector2( 0, 25 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 18.0
+margin/right = 72.0
+margin/bottom = 43.0
+syntax_highlighting = false
+show_line_numbers = false
+highlight_all_occurrences = false
+caret/block_caret = false
+caret/caret_blink = false
+caret/caret_blink_speed = 0.65
+
+[node name="softness_container1" type="VBoxContainer" parent="canvas_layer/control/panel_container/hbox"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 147.0
+margin/top = 0.0
+margin/right = 201.0
+margin/bottom = 43.0
+alignment = 0
+
+[node name="softness_label" type="Label" parent="canvas_layer/control/panel_container/hbox/softness_container1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 54.0
+margin/bottom = 14.0
+text = "Softness"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="softness_edit_text" type="TextEdit" parent="canvas_layer/control/panel_container/hbox/softness_container1"]
+
+rect/min_size = Vector2( 0, 25 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 18.0
+margin/right = 54.0
+margin/bottom = 43.0
+syntax_highlighting = false
+show_line_numbers = false
+highlight_all_occurrences = false
+caret/block_caret = false
+caret/caret_blink = false
+caret/caret_blink_speed = 0.65
+
+[node name="walls_container" type="VBoxContainer" parent="canvas_layer/control/panel_container/hbox"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 211.0
+margin/top = 0.0
+margin/right = 287.0
+margin/bottom = 43.0
+alignment = 0
+
+[node name="walls_label" type="Label" parent="canvas_layer/control/panel_container/hbox/walls_container"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 76.0
+margin/bottom = 14.0
+text = "Walls"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="walls_check_button" type="CheckButton" parent="canvas_layer/control/panel_container/hbox/walls_container"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 18.0
+margin/right = 76.0
+margin/bottom = 40.0
+toggle_mode = true
+is_pressed = true
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+align = 0
+
+[node name="camera" type="Camera2D" parent="."]
+
+anchor_mode = 0
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+limit/smoothed = false
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+
+[connection signal="pressed" from="canvas_layer/control/panel_container/hbox/btn_generate" to="." method="_on_btn_generate_pressed"]
+
+[connection signal="focus_exit" from="canvas_layer/control/panel_container/hbox/fill_percent_container/fill_percent_text_edit" to="." method="_on_fill_percent_text_edit_focus_exit"]
+
+[connection signal="focus_exit" from="canvas_layer/control/panel_container/hbox/softness_container1/softness_edit_text" to="." method="_on_softness_edit_text_focus_exit"]
+
+[connection signal="toggled" from="canvas_layer/control/panel_container/hbox/walls_container/walls_check_button" to="." method="_on_walls_check_button_toggled"]
 
 
